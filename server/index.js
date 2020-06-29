@@ -16,10 +16,10 @@ app.use(express.static(__dirname + '/../react-client/dist'));
 var router=express.Router();
 
 
-// app.post('/',function (req, res) {
-// 	console.log(req.body)
-// items.insertIntoAutho(req.body)
-// })
+app.post('/',function (req, res) {
+	console.log(req.body)
+items.insertIntoAutho(req.body)
+})
 
 
 
@@ -41,6 +41,34 @@ var router=express.Router();
 
 // })
 
+// router.post("/",function(req,res,next ){
+//    res.render("items",{tittle:"express"})
+// })
+
+// router.post("/register",function(req,res){
+// var email=req.body.email
+// var password=req.body.password
+
+// var newuser=new Techer()
+// newuser.email=email
+// newuser.password=password
+
+// newuser.save(function(err,saveuser){
+//    if (err){
+//       console.log(err)
+//       return res.status(500).send()
+//    }
+//    return res.status(200).send()
+// })
+
+
+
+
+// })
+
+
+
+
 
 //router.post("/login",function(req,res){
 router.post("/",function(req,res){
@@ -56,34 +84,13 @@ if (!items){
 }
 
 return res.status(200).send()
-
-
-})
-
-
+console.log("oo")
 
 })
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})
 
 
 
@@ -95,8 +102,6 @@ app.listen(3110, function() {
 
 
 
-
-
-
+module.exports=router
 
 
